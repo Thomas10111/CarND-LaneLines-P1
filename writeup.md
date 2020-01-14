@@ -19,11 +19,13 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
+![removed brighter colors](threshold.png)
 [![removed brighter colors](threshold.png)]
+
 
 My pipeline consists of five steps. First, 
 - darker colors are removed by using the inRange() function,
-[![removed brighter colors](threshold.png)]
+![removed brighter colors](threshold.png)
 - then the image is blurred with a gaussian filter,
 - the next step detects edges, then
 - irrelevant regions of the image are removed,
