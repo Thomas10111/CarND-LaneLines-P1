@@ -20,12 +20,12 @@ The goals / steps of this project are the following:
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
 My pipeline consists of five steps. First, 
-
 - darker colors are removed by using the inRange() function,
+![removed brighter colors][threshold.png]
 - then the image is blurred with a gaussian filter,
-- in the next step edges are detected,
+- the next step detects edges, then
 - irrelevant regions of the image are removed,
-- finally the remaining image is used to detect lines.  
+- finally, in the remaining image the Hough algorithm is used to detect lines .  
 
 The detected lines are then filtered to remove unrealistic lines.
 
@@ -33,12 +33,16 @@ Beside the image processing pipeline two ideas are used to make the lane detecti
 - For each lane a different region of interest is used, to reduce the number of wrongly detected lines
 - Another idea is to start with a high requirement and then if no lines can be detected reduce the required quality.
 
+In order to show the detected lines in the original image I use m and b from the two detected lines
+- to calculate the intersection point of the two detected lines, and
+- the intersection of the detected lines with the y axis.
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
+
+
 
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
-![alt text][image1]
+
 
 
 ### 2. Identify potential shortcomings with your current pipeline
@@ -47,6 +51,10 @@ If you'd like to include images to show how the pipeline works, here is how to i
 One potential shortcoming would be what would happen when ... 
 
 Another shortcoming could be ...
+How does the line detection pipeline work
+- at night when lighting conditions are different
+- in contruction areas when there are markers instead of lines, several (parallel) lines with different color, etc?
+- in cities when left or right line is missing
 
 
 ### 3. Suggest possible improvements to your pipeline
