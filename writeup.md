@@ -19,7 +19,7 @@ The goals / steps of this project are the following:
 
 ### 1. Pipeline
 
-My pipeline consists of five steps. First, 
+My pipeline consists of five steps and works in all the given scenarios. First, 
 - darker colors are removed by using the inRange() function,
 
 ![removed darker colors](threshold.png)
