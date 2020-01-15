@@ -17,12 +17,12 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-### 1. Pipeline.
+### 1. Pipeline
 
 My pipeline consists of five steps. First, 
 - darker colors are removed by using the inRange() function,
 ![removed darker colors](threshold.png)
-- then the image is blurred with a gaussian filter,
+- then the image is blurred with a Gaussian filter,
 - the next step detects edges, then
 ![edge detection](canny.png)
 - irrelevant regions of the image are removed,
@@ -41,7 +41,7 @@ In order to draw the detected lane lines I use m and b from the two detected lin
 With these three coordinates a triangle (without base line) can be drawn.
 
 
-### 2. Potential shortcomings with current pipeline
+### 2. Potential Shortcomings with current Pipeline
 
 Possible shortcomings of the lane line detection pipeline: 
 - different lighting conditions, e.g. at night or` artificial light
@@ -51,7 +51,7 @@ Possible shortcomings of the lane line detection pipeline:
 - processing speed
 
 
-### 3. Suggest possible improvements to your pipeline
+### 3. Suggest Possible Improvements to your Pipeline
 
 By changing the required quality of the detected lines a factor how certain the lane detection pipeline is can be used for further decision making.
 Currently only minimum required length is changed, this mechanism can be extended to play around with different parameters to get the highest certainty of the detected lines,
